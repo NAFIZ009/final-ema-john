@@ -25,11 +25,11 @@ function App() {
         {
           path:'/order',
           loader:()=>fetch('products.json'),
-          element:<PrivetRoute><Order/></PrivetRoute>
+          element:<Order/>
         },
         {
           path:"/order-review",
-          element:<OrderReview/>
+          element:<PrivetRoute><OrderReview/></PrivetRoute>
         },
         {
           path:'/login',
