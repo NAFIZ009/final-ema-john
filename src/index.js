@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { OrderedProductContext } from './Context/OrderedProductContext';
+import {UserInfoContext} from './Context/UserInfoContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <UserInfoContext>
+      <OrderedProductContext>
+        <App/>
+      </OrderedProductContext>
+    </UserInfoContext>
+    
   </React.StrictMode>
 );
 
